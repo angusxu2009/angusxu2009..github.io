@@ -16,21 +16,23 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="模板解析模板：二维DP从左上走到右下，再从右下走到左上。 解法： 首先，可以证明，相当于走2次DP。 然后，DP遍历是按照步数进行：f(i, j, k)，k表示部署，可以看成是斜着走。 特别注意的是，走到同一个格子只能计算一次。 思考：走k次怎么做？ 题目1Leecode 741 Solution: 123456789101112131415161718192021222324252627cons">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2024/04/27/hello-world/index.html">
+<meta property="og:title" content="二维动态规划：起点-终点-起点">
+<meta property="og:url" content="http://example.com/2024/05/06/%E4%BA%8C%E7%BB%B4%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%9A%E8%B5%B7%E7%82%B9-%E7%BB%88%E7%82%B9-%E8%B5%B7%E7%82%B9/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="模板解析模板：二维DP从左上走到右下，再从右下走到左上。 解法： 首先，可以证明，相当于走2次DP。 然后，DP遍历是按照步数进行：f(i, j, k)，k表示部署，可以看成是斜着走。 特别注意的是，走到同一个格子只能计算一次。 思考：走k次怎么做？ 题目1Leecode 741 Solution: 123456789101112131415161718192021222324252627cons">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-04-27T15:23:07.633Z">
-<meta property="article:modified_time" content="2024-04-27T15:23:07.633Z">
+<meta property="article:published_time" content="2024-05-06T05:24:45.000Z">
+<meta property="article:modified_time" content="2024-05-06T08:13:07.048Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Leetcode">
+<meta property="article:tag" content="动态规划">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - Hexo</title>
+  <title>二维动态规划：起点-终点-起点 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="二维动态规划：起点-终点-起点"></span>
           
         </div>
 
@@ -207,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-27 23:23" pubdate>
-          April 27, 2024 pm
+        <time datetime="2024-05-06 13:24" pubdate>
+          May 6, 2024 pm
         </time>
       </span>
     
@@ -219,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18 words
+          634 words
         
       </span>
     
@@ -230,7 +232,7 @@
         
         
         
-          1 mins
+          6 mins
         
       </span>
     
@@ -267,25 +269,28 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">二维动态规划：起点-终点-起点</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <h1 id="模板解析"><a href="#模板解析" class="headerlink" title="模板解析"></a>模板解析</h1><p>模板：二维DP从左上走到右下，再从右下走到左上。</p>
+<p>解法：</p>
+<p>首先，可以证明，相当于走2次DP。</p>
+<p>然后，DP遍历是按照步数进行：f(i, j, k)，k表示部署，可以看成是斜着走。</p>
+<p>特别注意的是，走到同一个格子只能计算一次。</p>
+<p>思考：走k次怎么做？</p>
+<h1 id="题目1"><a href="#题目1" class="headerlink" title="题目1"></a>题目1</h1><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/cherry-pickup/">Leecode 741</a></p>
+<p>Solution:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">55</span>;<br><span class="hljs-type">int</span> f[N][N][N * <span class="hljs-number">2</span>];<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">cherryPickup</span><span class="hljs-params">(vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; grid)</span> </span>&#123;<br>        <span class="hljs-type">int</span> n = grid.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-built_in">memset</span>(f, <span class="hljs-number">-0x3f3f</span>, <span class="hljs-keyword">sizeof</span> f);<br>        <span class="hljs-keyword">if</span> (grid[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] != <span class="hljs-number">-1</span>) f[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>][<span class="hljs-number">2</span>] = grid[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> k = <span class="hljs-number">3</span>; k &lt;= n * <span class="hljs-number">2</span>; ++ k) &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-built_in">max</span>(<span class="hljs-number">1</span>, k - n); i &lt;= <span class="hljs-built_in">min</span>(n, k - <span class="hljs-number">1</span>); ++ i) &#123;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-built_in">max</span>(<span class="hljs-number">1</span>, k - n); j &lt;= <span class="hljs-built_in">min</span>(n, k - <span class="hljs-number">1</span>); ++ j) &#123;<br>                    <span class="hljs-keyword">if</span> (grid[i - <span class="hljs-number">1</span>][k - i - <span class="hljs-number">1</span>] == <span class="hljs-number">-1</span> || grid[j - <span class="hljs-number">1</span>][k - j - <span class="hljs-number">1</span>] == <span class="hljs-number">-1</span>) <span class="hljs-keyword">continue</span>;<br>                    <span class="hljs-type">int</span> t = grid[i - <span class="hljs-number">1</span>][k - i - <span class="hljs-number">1</span>];<br>                    <span class="hljs-comment">// 如果不是同一个格子，需要加上一次</span><br>                    <span class="hljs-keyword">if</span> (i != j) t += grid[j - <span class="hljs-number">1</span>][k - j - <span class="hljs-number">1</span>];<br>                    <span class="hljs-comment">// 枚举四种转移方式</span><br>                    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> a = i - <span class="hljs-number">1</span>; a &lt;= i; ++ a) &#123;<br>                        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> b = j - <span class="hljs-number">1</span>; b &lt;= j; ++ b) &#123;<br>                            f[i][j][k] = <span class="hljs-built_in">max</span>(f[i][j][k], f[a][b][k - <span class="hljs-number">1</span>] + t);<br>                        &#125;<br>                    &#125;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">max</span>(<span class="hljs-number">0</span>, f[n][n][<span class="hljs-number">2</span> * n]);<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<h1 id="题目2"><a href="#题目2" class="headerlink" title="题目2"></a>题目2</h1><p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/1029/">Acwing 1027</a></p>
+<p>Solution:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">15</span>;<br><span class="hljs-type">int</span> f[N &lt;&lt; <span class="hljs-number">1</span>][N][N], w[N][N];<br><span class="hljs-type">int</span> n;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    cin &gt;&gt; n;<br>    <span class="hljs-type">int</span> a, b, c;<br>    <span class="hljs-keyword">while</span>(cin &gt;&gt; a &gt;&gt; b &gt;&gt; c || a || b || c) w[a][b] = c;<br>    <br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> k = <span class="hljs-number">2</span>; k &lt;= n + n; ++ k)&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i1 = <span class="hljs-number">1</span>; i1 &lt;= n; ++ i1)&#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i2 = <span class="hljs-number">1</span>; i2 &lt;= n; ++ i2)&#123;<br>                <span class="hljs-type">int</span> j1 = k - i1, j2 = k - i2;<br>                <span class="hljs-keyword">if</span>(j1 &gt;= <span class="hljs-number">1</span> &amp;&amp; j1 &lt;= n &amp;&amp; j2 &gt;= <span class="hljs-number">1</span> &amp;&amp; j2 &lt;= n)&#123;<br>                    <span class="hljs-type">int</span> t = w[i1][j1];<br>                    <span class="hljs-keyword">if</span>(i1 != i2) t += w[i2][j2];<br>                    <span class="hljs-keyword">auto</span> &amp;v = f[k][i1][i2];<br>                    v = <span class="hljs-built_in">max</span>(v, f[k - <span class="hljs-number">1</span>][i1 - <span class="hljs-number">1</span>][i2 - <span class="hljs-number">1</span>] + t);<br>                    v = <span class="hljs-built_in">max</span>(v, f[k - <span class="hljs-number">1</span>][i1][i2 - <span class="hljs-number">1</span>] + t);<br>                    v = <span class="hljs-built_in">max</span>(v, f[k - <span class="hljs-number">1</span>][i1 - <span class="hljs-number">1</span>][i2] + t);<br>                    v = <span class="hljs-built_in">max</span>(v, f[k - <span class="hljs-number">1</span>][i1][i2] + t);<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>    cout &lt;&lt; f[n + n][n][n] &lt;&lt; endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+<h1 id="题目3"><a href="#题目3" class="headerlink" title="题目3"></a>题目3</h1><p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/277/">Acwing 275</a></p>
+<p>Solution:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">55</span>;<br><span class="hljs-type">int</span> f[N &lt;&lt; <span class="hljs-number">1</span>][N][N], w[N][N];<br><span class="hljs-type">int</span> n, m;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    cin &gt;&gt; n &gt;&gt; m;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; ++ i)&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= m; ++ j)&#123;<br>            cin &gt;&gt; w[i][j];<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> k = <span class="hljs-number">2</span>; k &lt;= n + m; ++ k)&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i1 = <span class="hljs-number">1</span>; i1 &lt;= n; ++ i1)&#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i2 = <span class="hljs-number">1</span>; i2 &lt;= n; ++ i2)&#123;<br>                <span class="hljs-type">int</span> j1 = k - i1, j2 = k - i2;<br>                <span class="hljs-keyword">if</span>(j1 &gt;= <span class="hljs-number">1</span> &amp;&amp; j1 &lt;= m &amp;&amp; j2 &gt;= <span class="hljs-number">1</span> &amp;&amp; j2 &lt;= m)&#123;<br>                    <span class="hljs-type">int</span> t = w[i1][j1];<br>                    <span class="hljs-keyword">if</span>(i1 != i2) t += w[i2][j2];<br>                    <span class="hljs-keyword">auto</span> &amp;v = f[k][i1][i2];<br>                    v = <span class="hljs-built_in">max</span>(v, f[k - <span class="hljs-number">1</span>][i1][i2] + t);<br>                    v = <span class="hljs-built_in">max</span>(v, f[k - <span class="hljs-number">1</span>][i1 - <span class="hljs-number">1</span>][i2] + t);<br>                    v = <span class="hljs-built_in">max</span>(v, f[k - <span class="hljs-number">1</span>][i1][i2 - <span class="hljs-number">1</span>] + t);<br>                    v = <span class="hljs-built_in">max</span>(v, f[k - <span class="hljs-number">1</span>][i1 - <span class="hljs-number">1</span>][i2 - <span class="hljs-number">1</span>] + t);<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>    cout &lt;&lt; f[n + m][n][n] &lt;&lt; endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -293,6 +298,15 @@
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Leetcode/" class="print-no-link">#Leetcode</a>
+      
+        <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="print-no-link">#动态规划</a>
+      
+    </div>
   
 </div>
 
@@ -302,8 +316,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2024/04/27/hello-world/</div>
+      <div>二维动态规划：起点-终点-起点</div>
+      <div>http://example.com/2024/05/06/二维动态规划：起点-终点-起点/</div>
     </div>
     <div class="license-meta">
       
@@ -315,7 +329,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>April 27, 2024</div>
+          <div>May 6, 2024</div>
         </div>
       
       
@@ -347,9 +361,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/05/06/%E4%BA%8C%E7%BB%B4%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%9A%E8%B5%B7%E7%82%B9-%E7%BB%88%E7%82%B9-%E8%B5%B7%E7%82%B9/" title="二维动态规划：起点-终点-起点">
+                      <a href="/2024/05/06/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%9A%E5%88%92%E5%88%86%E6%95%B0%E9%87%8F%E4%B8%93%E9%A2%98/" title="动态规划：划分数量">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">二维动态规划：起点-终点-起点</span>
+                        <span class="hidden-mobile">动态规划：划分数量</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -357,8 +371,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/02/26/0226/" title="226">
-                        <span class="hidden-mobile">226</span>
+                      <a href="/2024/04/27/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
